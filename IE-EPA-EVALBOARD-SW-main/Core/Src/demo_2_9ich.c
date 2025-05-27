@@ -30,7 +30,7 @@ void demo_2_9ichV2() {
     memset(BlackImage, 0xFF, sizeof(BlackImage));
     memset(RedImage, 0x00, sizeof(RedImage)); // brak czerwieni
     // CZYŚCIMY BO NIE CHCEMY SYFILISA - PATRZ README.md
-
+/*
     // 4. Teraz wczytaj tekst do BlackImage i RedImage za pomocą Paint:
     Paint_NewImage(BlackImage, 128, 296, 0, WHITE); // TO CHYBA TEŻ DZIAŁA JAKO CZYSZCZENIE BUFORA
     Paint_SelectImage(BlackImage);
@@ -40,7 +40,10 @@ void demo_2_9ichV2() {
     Paint_SelectImage(RedImage);
     Paint_DrawRectangle(x_promotion - 2, y_promotion - 2, x_promotion + 100, y_promotion + 50, RED, DOT_PIXEL_1X1, DRAW_FILL_FULL);
     Paint_DrawString_EN(x_promotion, y_promotion, promotion, &Font16, BLACK, RED);
-
+*/
+    Paint_NewImage(BlackImage, 128, 296, 0, WHITE);
+    Paint_SelectImage(BlackImage);
+    Paint_DrawBitMapXY(gImage_logo248x46,0,40,46,248);
     // 5. Wyświetl
     EPD_Display(BlackImage, RedImage, 128, 296); // FUNKCJA WYŚWIETLAJĄCA
     HAL_Delay(3000);

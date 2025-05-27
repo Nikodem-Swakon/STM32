@@ -16,9 +16,13 @@ TODO:
  - trzeba ogarnąć plik z fontem w danym rozmiarze, dla polskich znaków. Aktualnie wykorzystywany jest plik bez znaków polskich
  - Fajnie by ogarnąć funkcję ustawiającą rotację ekranu dla aktualnych funkcji print np.:
 void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint16_t Rotate, uint16_t Color) {
-	Paint.Image = NULL;                                                       /|\
-	Paint.Image = image;                                                       |
-                                                                                   |
+	Paint.Image = NULL;                                                      
+	Paint.Image = image;                                    
+
+                   ten uint16_t Rotate właśnie.        
+
                                                          Żeby od razu był ustalony rotate i się nam nie jebało
 
                                             
+JAK BEDZIE PLYTKA NASZA: 
+- piny podmienić odpowiednio i kod wygenerować dla naszej stm 
