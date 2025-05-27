@@ -130,9 +130,9 @@ int main(void)
 
 */
   //////////////////////// FUNKCJA TESTOWA/////////////////////////////////
-
-
-  //demo_V1();     //Wyświetla testowe 3 prostokąty W B R
+  //while (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12) == GPIO_PIN_SET); // próbowałem ogarnąć przycisk, ale coś nie chwyta - podpięty jest miedzy GND a PA12
+  // jak ktoś chce się pobawić to reszta kodu jest w gpio.c i na dole maina, oznaczone "SWITCH"
+  demo_V1();     //Wyświetla testowe 3 prostokąty W B R
   //demo_V2();     //Wyświetla image  gImage_logo248x46
   //demo_V3();       // Wyświetla string1 i string2
 
@@ -188,33 +188,14 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-// Załóżmy: uint8_t pattern[128/8 * 296];
 
-void fill_stripes(uint8_t *buf, uint16_t width, uint16_t height)
-{
-    uint16_t bytes_per_line = width / 8;
-    for(uint16_t y=0; y<height; y++)
-    {
-        uint8_t color = (y % 2) ? 0x00 : 0xFF; // co druga linia: czarna lub biała
-        for(uint16_t x=0; x<bytes_per_line; x++)
-        {
-            buf[y * bytes_per_line + x] = color;
-        }
+/*SWITCH
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    if (GPIO_Pin == GPIO_PIN_12) {
+        // Wybudzenie lub jakaś akcja po przerwaniu
     }
-}
+}*/
 
-void fill_checkerboard(uint8_t *buf, uint16_t width, uint16_t height)
-{
-    uint16_t bytes_per_line = width / 8;
-    for(uint16_t y=0; y<height; y++)
-    {
-        for(uint16_t x=0; x<bytes_per_line; x++)
-        {
-            // Szachownica: bajt na zmianę 0xAA (10101010) / 0x55 (01010101) -- wzór zależny od y
-            buf[y * bytes_per_line + x] = ((y % 2) == 0) ? 0xAA : 0x55;
-        }
-    }
-}
 /* USER CODE END 4 */
 
 /**

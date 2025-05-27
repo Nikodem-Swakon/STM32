@@ -1,3 +1,4 @@
+../Core/Inc/stm32f1xx_it.h:59:6:EXTI15_10_IRQHandler	1
 ../Core/Src/stm32f1xx_it.c:69:6:NMI_Handler	1
 ../Core/Src/stm32f1xx_it.c:84:6:HardFault_Handler	1
 ../Core/Src/stm32f1xx_it.c:99:6:MemManage_Handler	1
