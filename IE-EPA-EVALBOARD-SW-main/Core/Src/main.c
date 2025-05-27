@@ -132,15 +132,10 @@ int main(void)
   //////////////////////// FUNKCJA TESTOWA/////////////////////////////////
 
 
-  //demo_2_13ich();
-  //demo_2_66ich();
-  //demo_2_9ich();
-  //demo_4_2ich();
+  //demo_V1();     //Wyświetla testowe 3 prostokąty W B R
+  //demo_V2();     //Wyświetla image  gImage_logo248x46
+  //demo_V3();       // Wyświetla string1 i string2
 
-  //demo_2_13ichV2();
-  //demo_2_66ichV2();
-  demo_2_9ichV2();
-  //demo_4_2ichV2();
   /* USER CODE END 2 */
 
   /* Infinite loop */
