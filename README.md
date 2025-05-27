@@ -18,7 +18,7 @@ TODO:
 void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint16_t Rotate, uint16_t Color) {
 	Paint.Image = NULL;                                                       /|\
 	Paint.Image = image;                                                       |
-                                                                             |
-                                                                           Żeby od razu był ustalony rotate i się nam nie jebało
+                                                                                   |
+                                                         Żeby od razu był ustalony rotate i się nam nie jebało
 
                                             
